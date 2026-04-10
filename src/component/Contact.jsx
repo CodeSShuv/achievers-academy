@@ -5,12 +5,15 @@ export default function Contact() {
     <div className="contact-section">
       
       {/* LEFT IMAGE */}
-      <div className="contact-left">
-        <img 
-          src="https://cdn-icons-png.flaticon.com/512/9068/9068670.png" 
-          alt="contact" 
-        />
-      </div>
+<div className="map-container contact-left">
+  <iframe
+    src="https://www.google.com/maps?q=Kathmandu&output=embed"
+    
+   
+    allowFullScreen=""
+    loading="lazy"
+  ></iframe>
+</div>
 
       {/* RIGHT FORM */}
       <div className="contact-right">

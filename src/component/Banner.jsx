@@ -1,3 +1,4 @@
+import   "./css/bannertext.css";
 const Banner = ({ bannerUrl, bannerText }) => {
     return (
         
