@@ -1,0 +1,149 @@
+.navbar{
+    background-color: white;
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* changed */
+    padding: 0 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    /* overflow-x: hidden; */
+     overflow: visible;
+    /* overflow-y: visible!important; */
+}
+/* Navigation */
+.active-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    overflow: visible;
+}
+
+/* Logo */
+.navbar-logo img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+/* Links */
+.nav-links a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+    color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown{
+    position: relative;
+    overflow: visible!important;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 10rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    padding: 0.75rem 1rem;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger */
+.hamburgermenu{
+    display: none;
+}
+
+.hamburgermenu button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+}
+
+.hamburgermenu img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+    .hamburgermenu{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 5.5rem; /* below navbar */
+        right: 0;
+        left: 0;
+        background: white;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        display: none; /* hidden by default */
+        z-index: 8;
+    }
+
+    .nav-links.active{
+        display: flex; /* show when clicked */
+        overflow: visible!important;
+    }
+
+    .nav-links a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+    .navbar{
+        padding: 0 1.5rem;
+    }
+
+    .navbar-logo img{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .nav-links{
+        padding: 1rem 1rem 1.5rem;
+    }
+}

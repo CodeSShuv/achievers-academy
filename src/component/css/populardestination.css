@@ -1,0 +1,60 @@
+.popular-destination {
+    background-color: #cfcfcf4b;
+    padding: 3.125rem 0;
+    text-align: center;
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    overflow-x: hidden;
+}
+.title-bar{
+    font-size: 5rem;
+    /* font-weight: 700; */
+    margin-bottom: 2rem;
+    font-family: "Mozilla Headline", sans-serif;
+    color:var(--danger-color);
+}
+.destination-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* width: min(100%, 50rem); */
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .popular-destination {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .title-bar {
+        font-size: 3.5rem;
+    }
+
+    .destination-container {
+        width: 100%;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-destination {
+        padding: 2rem 1rem;
+        gap: 3rem;
+    }
+
+    .title-bar {
+        font-size: 2.5rem;
+    }
+
+    .destination-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,204 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes blink {
+  0%, 100% { opacity: .8; }
+  50% { opacity: 0.5; }
+}
+
+.icon img {
+  animation: spin 5s ease-in-out infinite; 
+  width: 5rem;
+
+}
+#animated-icon {
+  position: absolute !important;
+  top:2rem ;
+  left: .3rem;
+  opacity: 0.8;
+}
+#static-icon img {
+  /* animation: none; */
+  width: 5rem;}
+#static-icon {
+  position: absolute ;
+ /* height: ; */
+  bottom: 0rem;
+  right: 4rem;
+  animation: blink 5s ease-in-out infinite; 
+  /* opacity: 0.3; */
+  /* display: none; */
+  z-index: 0;
+}
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 3.75rem;
+  min-height: 100vh;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGES */
+.bg-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 15.625rem;
+  opacity: 0.15;
+}
+
+.bg-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 21.875rem;
+  opacity: 0.1;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 31.25rem;
+  z-index: 2;
+}
+
+.hero-left h1 {
+  font-size: 7rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.hero-left p {
+  font-size: 2.5rem;
+  color: #475569;
+  margin-bottom: 1.5625rem;
+}
+
+.hero-left button {
+  padding: 0.75rem 1.625rem;
+  border: 2px solid;
+  background: transparent;
+  border-radius: 1.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-left button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* RIGHT TYPOGRAPHY */
+.hero-right {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 26.25rem;
+  font-size: 7.5rem;
+  font-weight: 900;
+  line-height: 0.8;
+  z-index: 2;
+  order: 2;
+  position: relative;
+  
+}
+
+/* LETTER */
+.big-letter {
+  position: relative;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 14rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ACTIVE */
+.big-letter.active {
+  transform: scale(1.15);
+}
+
+/* ICON */
+.icon {
+  position: absolute;
+  font-size: 1.875rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 3.75rem 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .hero-left h1 {
+    font-size: 3.5rem;
+  }
+  .hero-left p {
+    font-size: 2rem;
+  }
+
+  .hero-right {
+    font-size: 5.625rem;
+    order: 1;
+    margin-bottom: 6rem;
+  }
+  .hero-left{
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 3.125rem 1.25rem;
+    gap: 0;
+  }
+
+  .hero-left {
+    margin-bottom: 2.5rem;
+  }
+
+
+
+  .hero-right {
+    justify-content: center;
+    font-size: 4.375rem;
+    justify-self: flex-start;
+  }
+  .big-letter{
+    font-size: 5rem
+  }
+
+  .bg-left,
+  .bg-right {
+    width: 9.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  
+
+  .hero-right {
+    font-size: 3.125rem;
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+}

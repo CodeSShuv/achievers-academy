@@ -1,0 +1,117 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem 0;
+    width: 100%;
+    background-image: url("./img/intro-bg.png");
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.introduction-container h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--danger-color);
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.intro-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(100%, 25rem);
+    max-width: 25rem;
+    padding: 1.5625rem;
+    border-radius: 1rem;
+
+    /* glass effect */
+    background: #ffffff;
+    /* background: rgba(255, 255, 255, 0.6); */
+    backdrop-filter: blur(0.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
+
+    border: 0.0625rem solid rgba(255, 255, 255, 0.4);
+
+    /* soft shadow */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.intro-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: min(100%, 100rem);
+}
+
+.intro-card img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.welcome-text {
+    /* color: ; */
+    -webkit-text-stroke: 0.0625rem var(--danger-color);
+    color: transparent;
+    font-size: 10rem;
+}
+
+.intro-card p {
+    font-size: 1.25rem;
+    color: #333;
+    line-height: 1.7;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.intro-card h3 {
+    font-size: 1.5rem;
+    color: var(--danger-color);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .introduction-container h1 {
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .introduction-container h1 {
+        font-size: 3rem;
+    }
+
+    .introduction-container p {
+        width: 90%;
+        font-size: 1.4rem !important;
+    }
+
+    .welcome-text {
+        font-size: 3rem !important;
+    }
+
+    .intro-card {
+        width: 100%;
+        max-width: 22rem;
+        padding: 1.25rem;
+    }
+
+    .intro-cards-container {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .intro-card p {
+        font-size: 1.1rem;
+    }
+}
