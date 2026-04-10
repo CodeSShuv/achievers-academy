@@ -12,7 +12,7 @@ const PopularDestination = () => {
                 popular_destination.map((destination) => {
                   {console.log(destination.name)}
                     return (
-                       <Card imgSrc={destination.image} destinationName={destination.name} destinationDescription={destination.description}/>
+                       <Card imgSrc={destination.image} name={destination.name} description={destination.description}/>
                     );
                 })
             }

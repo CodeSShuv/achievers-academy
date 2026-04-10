@@ -1,6 +1,6 @@
 .custom-card{
     position: relative;
-    width: min(100%, 18rem);
+    width:18rem;
     max-width: 18rem;
     aspect-ratio: 18 / 10;
     overflow: hidden;
