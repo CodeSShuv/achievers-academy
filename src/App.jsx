@@ -5,6 +5,7 @@ import "./App.css";
 import InquiryPage from "./pages/InquiryPage.jsx";
 import Footer from "./component/Footer.jsx";
 import TestPrep from "./pages/TestPrep.jsx";
+import CountryPage from "./pages/CountryPage.jsx";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/inquiry" element={<InquiryPage />} />
         <Route path="/test-preparation" element={<TestPrep />} />
+        <Route path="/country/:slug" element={<CountryPage />} />
       </Routes>
       <Footer />
     </>
