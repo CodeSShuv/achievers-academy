@@ -52,7 +52,7 @@ export const topUniversities = {
     { university_name: "RMIT University", website: "https://www.rmit.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/5/5b/RMIT_University_logo.svg" }
   ],
 
-  "new zealand": [
+  "new-zealand": [
     { university_name: "University of Auckland", website: "https://www.auckland.ac.nz", img: "https://upload.wikimedia.org/wikipedia/en/5/5d/University_of_Auckland_coat_of_arms.svg" },
     { university_name: "University of Otago", website: "https://www.otago.ac.nz", img: "https://upload.wikimedia.org/wikipedia/en/0/0a/University_of_Otago_coat_of_arms.svg" },
     { university_name: "Victoria University of Wellington", website: "https://www.wgtn.ac.nz", img: "https://upload.wikimedia.org/wikipedia/en/0/0a/Victoria_University_of_Wellington_logo.svg" },

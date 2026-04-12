@@ -103,4 +103,24 @@ export const countries = [
       { title: "Work Rights", desc: "Work while studying and post-graduation." },
         { title: "Education Quality", desc: "Globally ranked universities." }
     ]
-  }];
+  },
+{
+  name: "New Zealand",
+  slug: "new-zealand",
+  heroImage: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad",
+  intro: "New Zealand is known for its high-quality education system, peaceful environment, and strong support for international students. It offers globally recognized degrees with a focus on practical learning and research.",
+  facts: [
+    "Bachelor degrees usually take 3 years.",
+    "Master’s degrees typically take 1–2 years.",
+    "Home to top universities like University of Auckland.",
+    "Offers post-study work visa options.",
+    "Known for safe and student-friendly environment."
+  ],
+  reasons: [
+    { title: "High-Quality Education", desc: "Globally recognized universities with strong academic standards." },
+    { title: "Safe Environment", desc: "One of the safest and most peaceful countries for students." },
+    { title: "Work Opportunities", desc: "Post-study work visa allows gaining international experience." },
+    { title: "Practical Learning", desc: "Focus on real-world skills and applied education." }
+  ]
+}
+];

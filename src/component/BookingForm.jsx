@@ -22,7 +22,6 @@ const BookingForm = ({toggleBookingForm}) => {
             <div className="input-box">
             <input type="text" placeholder="Your Address" required />
             </div>
-           
             <div className="input-box">
             <input type="tel" placeholder="Your Phone Number" required />
             </div>

@@ -8,6 +8,7 @@ import Footer from "./component/Footer.jsx";
 import TestPrep from "./pages/TestPrep.jsx";
 import CountryPage from "./pages/CountryPage.jsx";
 import BookingForm from "./component/BookingForm.jsx";
+import ChatBot from "./component/ChatBot.jsx";
 // import {  } from "react-router-dom";
 const App = () => {
     const [showBookingForm, setShowBookingForm] = useState(false);
@@ -27,8 +28,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/inquiry" element={<InquiryPage />} />
         <Route path="/test-preparation" element={<TestPrep />} />
-        <Route path="/country/:slug" element={<CountryPage   toggleBookingForm= {toggleBookingForm}/>} />
+        <Route path="/study/:slug" element={<CountryPage   toggleBookingForm= {toggleBookingForm}/>} />
       </Routes>
+      <ChatBot/>
       <Footer />
     </>
   );

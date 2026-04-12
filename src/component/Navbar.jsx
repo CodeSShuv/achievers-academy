@@ -22,18 +22,19 @@ const Navbar = () => {
                     <NavLink to="/test-preparation" className={({ isActive }) => isActive ? "active-link" : ""}>Test Preparation</NavLink>
                     <div className="dropdown-content">
                         <NavLink to="/ielts" className={({ isActive }) => isActive ? "active-link" : ""}>IELTS</NavLink>
-                        {/* <NavLink to="/toefl" className={({ isActive }) => isActive ? "active-link" : ""}>TOEFL</NavLink> */}
+                        
                         <NavLink to="/pte" className={({ isActive }) => isActive ? "active-link" : ""}>PTE</NavLink>
                         <NavLink to="/duolingo" className={({ isActive }) => isActive ? "active-link" : ""}>Duolingo</NavLink>
                     </div>
                 </div>
                 <div className="dropdown">
-                    <NavLink to="/study-abroad" className={({ isActive }) => isActive ? "active-link" : ""}>Study Abroad</NavLink>
+                    <NavLink to="/study/australia" className={({ isActive }) => isActive ? "active-link" : ""}>Study Abroad</NavLink>
                     <div className="dropdown-content">
-                        <NavLink to="/usa" className={({ isActive }) => isActive ? "active-link" : ""}>USA</NavLink>
-                        <NavLink to="/uk" className={({ isActive }) => isActive ? "active-link" : ""}>UK</NavLink>
-                        <NavLink to="/canada" className={({ isActive }) => isActive ? "active-link" : ""}>Canada</NavLink>
-                        <NavLink to="/australia" className={({ isActive }) => isActive ? "active-link" : ""}>Australia</NavLink>
+                        <NavLink to="/study/usa" className={({ isActive }) => isActive ? "active-link" : ""}>USA</NavLink>
+                        <NavLink to="/study/uk" className={({ isActive }) => isActive ? "active-link" : ""}>UK</NavLink>
+                        <NavLink to="/study/canada" className={({ isActive }) => isActive ? "active-link" : ""}>Canada</NavLink>
+                        <NavLink to="/study/australia" className={({ isActive }) => isActive ? "active-link" : ""}>Australia</NavLink>
+                        <NavLink to="/study/new-zealand" className={({ isActive }) => isActive ? "active-link" : ""}>New Zealand</NavLink>
                     </div>
                 </div>
                 <NavLink to="/inquiry" className={({ isActive }) => isActive ? "active-link" : ""}>Inquiry Form</NavLink>
