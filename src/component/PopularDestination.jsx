@@ -1,5 +1,4 @@
 import { Card } from "./Card.jsx";
-import React from "react";
 import { Link } from "react-router-dom";
 import popular_destination from "../data/popular_destination.js";
 import "./css/populardestination.css";
