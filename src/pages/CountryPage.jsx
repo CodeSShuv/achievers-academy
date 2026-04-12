@@ -4,7 +4,7 @@ import "./css/countrypage.css";
 import Banner from "../component/Banner.jsx";
 import TopUniversity from "../component/TopUniversity.jsx";
 import { topUniversities } from "../data/topuniversity_data.js";
-const CountryPage = () => {
+const CountryPage = ({ toggleBookingForm }) => {
     const { slug } = useParams();
     const country = countries.find((c) => c.slug === slug);
 
@@ -26,7 +26,7 @@ const CountryPage = () => {
         <h3>Book a Free Consultation</h3>
         <p>Get expert guidance for your study abroad journey.</p>
       </div>
-      <button>Book Now</button>
+      <button onClick={toggleBookingForm}>Book Now</button>
     </div>
 
     <h2>Why Choose {country.name}?</h2>
