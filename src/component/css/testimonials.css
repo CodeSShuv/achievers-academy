@@ -9,6 +9,7 @@
     margin-bottom: 2.5rem;
     color:var(--danger-color);
     font-family: "Mozilla Headline", sans-serif;
+    font-weight: 700;
 }
 .testimonial-card-container{
     display: flex;

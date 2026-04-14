@@ -1,219 +1,430 @@
-﻿/* PAGE WRAPPER */
+﻿/* ======================
+GLOBAL PAGE
+====================== */
+
 .country-page {
-  background: #f4f7fb;
+
+  background:
+  linear-gradient(
+  135deg,
+  #f4f7fb,
+  #eef3f9
+  );
+
   color: #111827;
-  text-align: left;
+
+  position: relative;
+
+  overflow-x: hidden;
 }
+
+
+/* ======================
+WRAPPER
+====================== */
 
 .country-page__wrapper {
-  padding: 4rem 12%;
-  /* max-width: 73.75rem; */
-  margin: 0 auto 4rem;
+
+  padding: 4rem 10%;
+
+  position: relative;
+
+  z-index: 1;
 }
 
-.country-page__wrapper h2 {
-  margin: 3rem 0 1.5rem;
-  font-size: 2rem;
-  line-height: 1.15;
 
-  font-size: 3rem;
-  font-weight: 900;
-  color: #e51120;
-  /* purple theme */
-  margin-bottom: 50px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 60px 8%;
-}
+/* ======================
+INTRO TEXT
+====================== */
 
 .country-page__intro {
-  font-size: 1.3rem;
-  line-height: 1.85;
+
+  font-size: 1.2rem;
+
+  line-height: 1.9;
+
   color: #475569;
-  max-width: 72ch;
-  margin-bottom: 2.5rem;
+
+  max-width: 70ch;
+
+  margin-bottom: 3rem;
 }
+
+
+/* ======================
+QUICK STATS
+====================== */
+
+.country-page__stats {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(200px,1fr));
+
+  gap: 1.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.stat {
+
+  background: white;
+
+  padding: 1.5rem;
+
+  border-radius: 1.2rem;
+
+  text-align: center;
+
+  box-shadow:
+  0 12px 35px rgba(0,0,0,0.06);
+
+  transition: .3s;
+}
+
+.stat:hover {
+
+  transform: translateY(-6px);
+}
+
+.stat h3 {
+
+  font-size: .95rem;
+
+  color: #64748b;
+
+  margin-bottom: .5rem;
+}
+
+.stat p {
+
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #e51120;
+}
+
+
+/* ======================
+CTA
+====================== */
 
 .country-page__cta {
+
   display: flex;
+
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  background: #ffffff;
-  border: 0.0625rem solid rgba(148, 163, 184, 0.24);
-  box-shadow: 0 1.125rem 3.125rem rgba(15, 23, 42, 0.08);
+
+  align-items: center;
+
+  background: white;
+
   padding: 2rem;
-  border-radius: 1.25rem;
-  margin: 3rem 0;
-  gap: 1.5rem;
-}
 
-.country-page__cta>div {
-  max-width: 58ch;
-}
+  border-radius: 1.5rem;
 
-.country-page__cta h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.35rem;
-  color: #0f172a;
-}
+  margin-bottom: 3rem;
 
-.country-page__cta p {
-  color: #475569;
-  font-size: 1rem;
+  box-shadow:
+  0 15px 45px rgba(0,0,0,.07);
 }
 
 .country-page__cta button {
-  padding: 1rem 1.8rem;
+
+  background:
+  linear-gradient(
+  135deg,
+  #e51120,
+  #ff4d4d
+  );
+
   border: none;
-  border-radius: 62.5rem;
-  background: linear-gradient(135deg, #0f6fff 0%, #2ba4ff 100%);
-  color: #ffffff;
+
+  padding: 1rem 2rem;
+
+  color: white;
+
+  border-radius: 999px;
+
   font-weight: 600;
-  letter-spacing: 0.01em;
+
   cursor: pointer;
-  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
-  white-space: nowrap;
+
+  transition: .3s;
 }
 
 .country-page__cta button:hover {
-  transform: translateY(-0.0625rem);
-  box-shadow: 0 0.875rem 1.875rem rgba(15, 23, 42, 0.18);
+
+  transform: translateY(-3px);
 }
 
+
+/* ======================
+HEADINGS
+====================== */
+
+.country-page__wrapper h2 {
+
+  font-size: 2.5rem;
+
+  font-weight: 900;
+
+  color: #e51120;
+
+  margin-bottom: 2rem;
+}
+
+
+/* ======================
+GRID SECTION
+====================== */
+
 .country-page__section {
+
   display: flex;
-  gap: 2.4rem;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+
+  gap: 2rem;
+
+  margin-bottom: 3rem;
 }
 
 .country-page__grid {
+
+  flex: 1;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 1.5rem;
-  flex: 1 1 58%;
-  min-width: 0;
 }
 
-.country-page__imageCard {
-  flex: 0 0 38%;
-  min-width: 22rem;
-  max-width: 38%;
-}
+
+/* ======================
+CARDS
+====================== */
 
 .country-page__card {
-  background: #ffffff;
-  border-radius: 1.25rem;
-  padding: 1.75rem;
-  box-shadow: 0 1.125rem 2.5rem rgba(15, 23, 42, 0.05);
-  border: 0.0625rem solid rgba(148, 163, 184, 0.16);
+
+  background: white;
+
+  padding: 1.6rem;
+
+  border-radius: 1.2rem;
+
+  box-shadow:
+  0 12px 35px rgba(0,0,0,.05);
+
+  transition: .3s;
+
+  position: relative;
 }
 
-.country-page__card h3 {
-  margin-bottom: 0.9rem;
-  font-size: 1.15rem;
-  color: #0f172a;
+.country-page__card:hover {
+
+  transform: translateY(-6px);
 }
 
-.country-page__card p {
-  color: #475569;
-  line-height: 1.8;
+.country-page__card::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 6px;
+
+  height: 100%;
+
+  background: #e51120;
+
+  border-radius: 6px 0 0 6px;
 }
+
+
+/* ======================
+IMAGE CARD
+====================== */
 
 .country-page__imageCard {
-  background: #ffffff;
-  border-radius: 1.25rem;
+
+  flex: .8;
+
+  background: white;
+
+  border-radius: 1.2rem;
+
   overflow: hidden;
-  position: sticky;
-  top: 2.75rem;
-  border: 0.0625rem solid rgba(148, 163, 184, 0.18);
-  box-shadow: 0 1.125rem 2.5rem rgba(15, 23, 42, 0.05);
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.08);
 }
 
 .country-page__imageCard img {
+
   width: 100%;
-  height: 24rem;
+
+  height: 350px;
+
   object-fit: cover;
-  display: block;
 }
 
 .country-page__imageCard p {
-  padding: 1.25rem;
-  color: #475569;
-  font-size: 0.97rem;
-  background: #f8fafc;
+
+  padding: 1rem;
+
+  font-size: .9rem;
+
+  color: #64748b;
 }
 
-.country-page__facts {
+
+/* ======================
+COST SECTION
+====================== */
+
+.country-page__cost {
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
-  gap: 1.25rem;
-  margin-top: 2.5rem;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(220px,1fr));
+
+  gap: 1.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.cost-card {
+
+  background: white;
+
+  padding: 1.6rem;
+
+  border-radius: 1.2rem;
+
+  text-align: center;
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,.06);
+
+  transition: .3s;
+}
+
+.cost-card:hover {
+
+  transform: translateY(-6px);
+}
+
+.cost-card h3 {
+
+  color: #e51120;
+
+  margin-bottom: .6rem;
+}
+
+
+/* ======================
+FACTS
+====================== */
+
+.country-page__facts {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(220px,1fr));
+
+  gap: 1.5rem;
+
+  margin-bottom: 3rem;
 }
 
 .country-page__fact {
-  background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
+
+  background: white;
+
+  padding: 1.4rem;
+
   border-radius: 1rem;
-  padding: 1.25rem 1.4rem;
-  border: 0.0625rem solid rgba(148, 163, 184, 0.16);
-  box-shadow: 0 0.875rem 2.1875rem rgba(15, 23, 42, 0.05);
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,.05);
+
+  transition: .3s;
 }
 
-.country-page__fact p {
-  margin: 0;
-  color: #334155;
-  line-height: 1.85;
+.country-page__fact:hover {
+
+  transform: translateY(-5px);
 }
 
-@media (max-width: 60rem) {
-  .country-page__wrapper {
-    padding: 3rem 8%;
-  }
 
-  .country-page__section {
-    flex-wrap: wrap;
-  }
+/* ======================
+BOTTOM CTA
+====================== */
 
-  .country-page__grid,
-  .country-page__imageCard {
-    flex: 1 1 100%;
-    min-width: 0;
-  }
+.country-page__bottomCta {
 
-  .country-page__cta {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  text-align: center;
 
-  .country-page__imageCard {
-    position: relative;
-    top: auto;
+  background:
+  linear-gradient(
+  135deg,
+  #e51120,
+  #ff4d4d
+  );
 
-  }
+  color: white;
+
+  padding: 3rem;
+
+  border-radius: 2rem;
+
+  margin-top: 3rem;
 }
 
-@media (max-width: 40rem) {
-  .country-page__wrapper {
-    padding: 2rem 5%;
-  }
+.country-page__bottomCta button {
 
-  .country-page__cta {
-    padding: 1.5rem;
-  }
+  margin-top: 1.2rem;
 
-  .country-page__cta button {
-    width: 100%;
-    justify-self: stretch;
-  }
+  padding: 1rem 2rem;
 
-  .country-page__card,
-  .country-page__fact {
-    padding: 1.25rem;
-  }
+  border: none;
 
-  .country-page__imageCard img {
-    height: 13.75rem;
-  }
+  border-radius: 999px;
+
+  background: white;
+
+  color: #e51120;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* ======================
+RESPONSIVE
+====================== */
+
+@media(max-width:960px){
+
+.country-page__section {
+
+  flex-direction: column;
+}
+
+.country-page__cta {
+
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
 }
