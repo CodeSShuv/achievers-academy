@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./css/inquiryform.css";
-
+import { submitInquiry } from "../../../api/API_INQUIRY.JS";
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
     // Basic Info
@@ -63,8 +63,10 @@ const InquiryForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    let formData = await submitInquiry(formData);
+
     console.log("Form Data Submitted:", formData);
     setSubmitted(true);
     // Reset form after 2 seconds
@@ -122,7 +124,7 @@ const InquiryForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="passportNo">Passport Number *</label>
+            <label htmlFor="passportNo">Passport Number </label>
             <input
               type="text"
               id="passportNo"
@@ -130,7 +132,6 @@ const InquiryForm = () => {
               value={formData.passportNo}
               onChange={handleChange}
               placeholder="Enter passport number"
-              required
             />
           </div>
         </div>
@@ -170,7 +171,7 @@ const InquiryForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="percentageGradeCgpa">Percentage/Grade/CGPA *</label>
+            <label htmlFor="percentageGradeCgpa">Percentage/Grade/CGPA</label>
             <input
               type="text"
               id="percentageGradeCgpa"
@@ -178,7 +179,6 @@ const InquiryForm = () => {
               value={formData.percentageGradeCgpa}
               onChange={handleChange}
               placeholder="e.g., 85% or A+ or 3.8"
-              required
             />
           </div>
 
@@ -202,13 +202,13 @@ const InquiryForm = () => {
         <div className="form-section">
           <h2 className="section-heading">Additional Information</h2>
           <div className="form-group">
-            <label htmlFor="maritalStatus">Marital Status *</label>
+            <label htmlFor="maritalStatus">Marital Status </label>
             <select
               id="maritalStatus"
               name="maritalStatus"
               value={formData.maritalStatus}
               onChange={handleChange}
-              required
+              
             >
               <option value="">Select Marital Status</option>
               <option value="Single">Single</option>
@@ -263,13 +263,13 @@ const InquiryForm = () => {
         <div className="form-section">
           <h2 className="section-heading">Study Preferences</h2>
           <div className="form-group">
-            <label htmlFor="country">Country to Apply *</label>
+            <label htmlFor="country">Country to Apply </label>
             <select
               id="country"
               name="country"
               value={formData.country}
               onChange={handleChange}
-              required
+              
             >
               {countryOptions.map((option) => (
                 <option key={option} value={option}>
@@ -280,13 +280,13 @@ const InquiryForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="courses">Courses You Want to Study *</label>
+            <label htmlFor="courses">Courses You Want to Study </label>
             <select
               id="courses"
               name="courses"
               value={formData.courses}
               onChange={handleChange}
-              required
+              
             >
               {courseOptions.map((option) => (
                 <option key={option} value={option}>

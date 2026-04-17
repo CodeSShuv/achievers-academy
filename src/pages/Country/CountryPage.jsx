@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { countries } from "../data/country_info.js";
-import "./css/countrypage.css";
-import Banner from "../component/Banner.jsx";
-import TopUniversity from "../component/TopUniversity.jsx";
-import { topUniversities } from "../data/topuniversity_data.js";
+import { countries } from "../../data/country_info.js";
+import "./countrypage.css";
+import Banner from "../../component/Banner.jsx";
+import TopUniversity from "../../component/TopUniversity.jsx";
+import { topUniversities } from "../../data/topuniversity_data.js";
 
 const CountryPage = ({ toggleBookingForm }) => {
   const { slug } = useParams();

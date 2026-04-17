@@ -1,6 +1,6 @@
-import "./css/testPrep.css";
-import Banner from "../component/Banner.jsx";
-import { testPrepData } from "../data/test_prep_card.js";
+import "./testPrep.css";
+import Banner from "../../component/Banner.jsx";
+import { testPrepData } from "../../data/test_prep_card.js";
 
 const TestPrep = () => {
 

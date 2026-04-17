@@ -1,4 +1,4 @@
-import services from "../data/our_services";
+import services from "../../../data/our_services";
 import "./css/ourservices.css";
 
 const OurServices = () => {

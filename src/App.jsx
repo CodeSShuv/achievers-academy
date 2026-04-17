@@ -1,14 +1,15 @@
 import {useEffect,useState} from "react";
 import { Routes, Route,useLocation } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home.jsx";
 import Navbar from "./component/Navbar.jsx";
 import "./App.css";
-import InquiryPage from "./pages/InquiryPage.jsx";
+import InquiryPage from "./pages/Inquiry/InquiryPage.jsx";
 import Footer from "./component/Footer.jsx";
-import TestPrep from "./pages/TestPrep.jsx";
-import CountryPage from "./pages/CountryPage.jsx";
+import TestPrep from "./pages/TestPrep/TestPrep.jsx";
+import CountryPage from "./pages/Country/CountryPage.jsx";
 import BookingForm from "./component/BookingForm.jsx";
 import ChatBot from "./component/ChatBot.jsx";
+import AboutUs from "./pages/About/About.jsx";
 // import {  } from "react-router-dom";
 const App = () => {
     const [showBookingForm, setShowBookingForm] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inquiry" element={<InquiryPage />} />
+         <Route path="/about" element={<AboutUs />} />
         <Route path="/test-preparation" element={<TestPrep />} />
         <Route path="/study/:slug" element={<CountryPage   toggleBookingForm= {toggleBookingForm}/>} />
       </Routes>

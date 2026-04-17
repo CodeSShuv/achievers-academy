@@ -1,6 +1,6 @@
-import { Card } from "./Card.jsx";
+import { Card } from "../../../component/Card.jsx";
 import { Link } from "react-router-dom";
-import popular_destination from "../data/popular_destination.js";
+import popular_destination from "../../../data/popular_destination.js";
 import "./css/populardestination.css";
 const PopularDestination = () => {
   return (

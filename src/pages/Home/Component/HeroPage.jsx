@@ -1,6 +1,6 @@
 import { useState } from "react";
-import world from "../assets/img/world.png";
-import tower from "../assets/img/big-ben.png";
+import world from "../../../assets/img/world.png";
+import tower from "../../../assets/img/big-ben.png";
 import "./css/heropage.css";
 
 const HeroPage = () => {

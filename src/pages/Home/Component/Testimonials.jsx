@@ -1,5 +1,5 @@
 import "./css/testimonials.css";
-import testimonials from "../data/testimonials.js";
+import testimonials from "../../../data/testimonials.js";
 const Testimonials = () => {
     return (
         <section className="testimonials">

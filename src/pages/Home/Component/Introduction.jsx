@@ -1,7 +1,7 @@
 import "./css/introduction.css";
-import vision from "../assets/img/vision.png";
-import inspiration from "../assets/img/inspiration.png";
-import achievement from "../assets/img/achievement.png";
+import vision from "../../../assets/img/vision.png";
+import inspiration from "../../../assets/img/inspiration.png";
+import achievement from "../../../assets/img/achievement.png";
 const Introduction = () => {
     return (
         <><section className="introduction">

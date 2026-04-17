@@ -1,5 +1,5 @@
-import InquiryForm from "../component/InquiryForm";
-import "./css/inquirypage.css";
+import InquiryForm from "./Components/InquiryForm.jsx";
+import "./inquirypage.css";
 
 const InquiryPage = () => {
   return (
