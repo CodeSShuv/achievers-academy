@@ -1,4 +1,5 @@
-﻿import Contact from "../../component/Contact.jsx";
+﻿import Banner from "../../component/Banner.jsx";
+import Contact from "../../component/Contact.jsx";
 import "./aboutus.css";
 
 const AboutUs = () => {
@@ -6,11 +7,7 @@ const AboutUs = () => {
     <section className="about-us">
       {/* Header Section */}
       <div className="about-header">
-        <p className="about-label">GLOBAL EDUCATION CONSULTANCY</p>
-        <h1>About Us</h1>
-        <p className="about-subtitle">
-          Welcome to <span>Achievers Career Academy</span>
-        </p>
+        <Banner bannerText={"About Us"}/>
       </div>
 
       <div className="about-hero-grid">

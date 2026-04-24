@@ -139,9 +139,7 @@ const CountryPage = ({ toggleBookingForm }) => {
         {/* FINAL CTA */}
         <div className="country-page__bottomCta">
 
-          <h2>
-            Start Your Journey to {country.name}
-          </h2>
+        
 
           <p>
             Talk to our expert counsellors today and get step-by-step guidance.

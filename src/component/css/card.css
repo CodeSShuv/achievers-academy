@@ -5,6 +5,7 @@
     aspect-ratio: 18 / 10;
     overflow: hidden;
     border-radius: none !important;
+    padding : 0 !important;
 }
 .custom-card img{
     width: 100%;

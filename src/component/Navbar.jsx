@@ -18,15 +18,9 @@ const Navbar = () => {
             <div className={`nav-links ${menuOpen ? "active" : ""}`}>
                 <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink>
                 <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About</NavLink>
-                <div className="dropdown">
+               
                     <NavLink to="/test-preparation" className={({ isActive }) => isActive ? "active-link" : ""}>Test Preparation</NavLink>
-                    <div className="dropdown-content">
-                        <NavLink to="/ielts" className={({ isActive }) => isActive ? "active-link" : ""}>IELTS</NavLink>
-                        
-                        <NavLink to="/pte" className={({ isActive }) => isActive ? "active-link" : ""}>PTE</NavLink>
-                        <NavLink to="/duolingo" className={({ isActive }) => isActive ? "active-link" : ""}>Duolingo</NavLink>
-                    </div>
-                </div>
+                  
                 <div className="dropdown">
                     <NavLink to="/study/australia" className={({ isActive }) => isActive ? "active-link" : ""}>Study Abroad</NavLink>
                     <div className="dropdown-content">

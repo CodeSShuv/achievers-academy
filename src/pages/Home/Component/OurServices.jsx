@@ -4,14 +4,14 @@ import "./css/ourservices.css";
 const OurServices = () => {
   return (
     <section className="our-services">
-      <h3>Our Services</h3>
+      <h3 id="title">Our Services</h3>
 
       <div className="service-card-container">
 
         {/* Featured Card */}
         <div className="service-card service-card--featured">
           <img
-            src="https://plus.unsplash.com/premium_photo-1664461662789-b72903263bad?w=500&auto=format&fit=crop&q=60"
+            src="https://plus.unsplash.com/premium_photo-1665990294874-36ff13d2b66d?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Career Counselling"
           />
           <div className="service-overlay">

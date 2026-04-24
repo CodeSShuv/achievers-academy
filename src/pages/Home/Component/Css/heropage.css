@@ -7,9 +7,14 @@
   50% { opacity: 0.5; }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .icon img {
   animation: spin 5s ease-in-out infinite; 
-  width: 5rem;
+  width: 1rem;
 
 }
 #animated-icon {
@@ -23,9 +28,9 @@
   width: 5rem;}
 #static-icon {
   position: absolute ;
- /* height: ; */
+ /* height:.5rem ; */
   bottom: 0rem;
-  right: 4rem;
+  right: 0rem;
   animation: blink 5s ease-in-out infinite; 
   /* opacity: 0.3; */
   /* display: none; */
@@ -37,10 +42,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 3.75rem;
+  padding: 10rem 3.75rem;
   min-height: 100vh;
   background: #f8fafc;
   overflow: hidden;
+  ;
 }
 
 /* BACKGROUND IMAGES */
@@ -62,8 +68,15 @@
 
 /* LEFT */
 .hero-left {
-  max-width: 31.25rem;
+  width: 60%;
+  height: 100%;
   z-index: 2;
+  /* background-color: #475569; */
+  display: flex;
+  gap:5rem;
+  position: relative; 
+    /* display: flex; */
+  
 }
 
 .hero-left h1 {
@@ -87,6 +100,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+
 }
 
 .hero-left button:hover {
@@ -117,6 +131,10 @@
   position: relative;
   z-index: 2;
 }
+.text{
+  /* style="--bg-color: red;" */
+  text-shadow: var(--shadow-color) 0px 7px 29px 0px;
+}
 
 /* ACTIVE */
 .big-letter.active {
@@ -131,6 +149,42 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.hero-right img{
+  width: 30%;
+  height: 30%;
+  /* opacity:10%; */
+  filter: invert(100%);
+  border-radius: 100%;
+  display: 
+  flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.hero-image{
+  width: 1
+  0rem;
+  position: absolute;
+  top: -8rem;
+  right: -5rem;
+}
+.hero-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 30%;
+}
+.fadeIn{
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 
+.left-text-container p , .left-text-container h1{
+  animation: fadeIn 4s ease-in-out;
+  
+
+} */
 
 /* ========================= */
 /* 📱 RESPONSIVE DESIGN */
@@ -163,6 +217,11 @@
 }
 
 @media (max-width: 768px) {
+  #animated-icon{
+    top: 10rem;
+    left:1rem;
+    opacity: 30%;
+  }
   .hero-container {
     flex-direction: column;
     text-align: center;

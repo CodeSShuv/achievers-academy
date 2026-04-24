@@ -6,6 +6,7 @@ const Banner = ({ bannerUrl, bannerText }) => {
             <div className="banner-image">
                     <img src={bannerUrl} alt="" />
                     <div className="banner-text">
+                        
                         <h3>{bannerText}</h3>
                     </div>
             </div>

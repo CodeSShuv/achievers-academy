@@ -10,6 +10,7 @@ import CountryPage from "./pages/Country/CountryPage.jsx";
 import BookingForm from "./component/BookingForm.jsx";
 import ChatBot from "./component/ChatBot.jsx";
 import AboutUs from "./pages/About/About.jsx";
+import { Toaster } from "react-hot-toast";
 // import {  } from "react-router-dom";
 const App = () => {
     const [showBookingForm, setShowBookingForm] = useState(false);
@@ -23,10 +24,11 @@ const App = () => {
   };
   return (
     <>
+    <Toaster  position="top-center"/>
       <Navbar />
       {showBookingForm && <BookingForm toggleBookingForm={toggleBookingForm} />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home toggleBookingForm={toggleBookingForm}/>} />
         <Route path="/inquiry" element={<InquiryPage />} />
          <Route path="/about" element={<AboutUs />} />
         <Route path="/test-preparation" element={<TestPrep />} />

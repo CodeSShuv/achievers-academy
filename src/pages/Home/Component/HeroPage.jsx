@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import world from "../../../assets/img/world.png";
 import tower from "../../../assets/img/big-ben.png";
 import "./css/heropage.css";
 
 const HeroPage = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   const letters = [
     {
       short: "A",
       full: "Ambition",
       desc: "Start your journey to study abroad.",
       color: "#e63946",
-      icon: "✈️",
+     
+      imgLink: `${baseUrl}/img/trophy.png`,
+      // icon: "✈️",
     },
     {
       short: "C",
@@ -18,6 +21,7 @@ const HeroPage = () => {
       desc: "Stay consistent towards your goals.",
       color: "#f77f00",
       icon: "📈",
+      imgLink: `${baseUrl}/img/consistency.png`,
     },
     {
       short: "H",
@@ -25,6 +29,7 @@ const HeroPage = () => {
       desc: "Effort is the key to success.",
       color: "#2a9d8f",
       icon: "💪",
+      imgLink: `${baseUrl}/img/hard-work.png`,
     },
     {
       short: "I",
@@ -32,6 +37,7 @@ const HeroPage = () => {
       desc: "Explore new global opportunities.",
       color: "#264653",
       icon: "💡",
+      imgLink: `${baseUrl}/img/innovation.png`,
     },
     {
       short: "E",
@@ -39,6 +45,7 @@ const HeroPage = () => {
       desc: "Achieve excellence in education.",
       color: "#8b5cf6",
       icon: "⭐",
+      imgLink: `${baseUrl}/img/exe.png`,
     },
     {
       short: "V",
@@ -46,6 +53,7 @@ const HeroPage = () => {
       desc: "Build your future vision.",
       color: "#0ea5e9",
       icon: "👁️",
+      imgLink: `${baseUrl}/img/vision.png`,
     },
     {
       short: "E",
@@ -53,6 +61,7 @@ const HeroPage = () => {
       desc: "Your effort defines your result.",
       color: "#16a34a",
       icon: "🔥",
+      imgLink: `${baseUrl}/img/effort.png`,
     },
     {
       short: "R",
@@ -60,19 +69,30 @@ const HeroPage = () => {
       desc: "Stay strong in challenges.",
       color: "#d97706",
       icon: "🛡️",
+      imgLink: `${baseUrl}/img/res.png`,
     },
     {
       short: "S",
       full: "Success",
       desc: "Your journey ends with success.",
       color: "#ec4899",
+      imgLink: `${baseUrl}/img/student.png`,
       icon: "🏆",
     },
   ];
-
+  const [animate,setAnimate] = useState(false);
+  const startAnimation= ()=>{
+    setAnimate(true)
+    let animationTimeOut = setTimeout(() => {
+      setAnimate(false);
+    }, 3000);  
+    return () => clearTimeout(animationTimeOut);
+  }
   const [activeIndex, setActiveIndex] = useState(0);
   const active = letters[activeIndex];
-
+useEffect(() => {
+    
+},[activeIndex]);
   return (
     <div className="hero-container">
   {/* BACKGROUND ILLUSTRATIONS */}
@@ -81,8 +101,15 @@ const HeroPage = () => {
 
   {/* LEFT CONTENT */}
   <div className="hero-left">
-    <h1 style={{ color: active.color }}>{active.full}</h1>
-    <p>{active.desc}</p>
+    <div className="left-text-container">
+
+  <h1 className={`text ${!animate ? "fadeIn" : ""}`} style={{ color: active.color }}>{active.full}</h1>
+  <p data-color={active.color} className={`text ${!animate ? "fadeIn" : ""}`}
+    style={{ "--shadow-color": active.color }}>{active.desc}</p>
+    </div>
+    <div className="hero-image">
+      <img src={active.imgLink}  alt="" />
+    </div>
     {/* <button style={{ borderColor: active.color, color: active.color }}>
       Explore More →
     </button> */}

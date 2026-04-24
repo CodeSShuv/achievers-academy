@@ -1,17 +1,18 @@
 import { useState } from "react";
 import "./css/inquiryform.css";
 import { submitInquiry } from "../../../api/API_INQUIRY.JS";
+import {toast} from "react-hot-toast";
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
     // Basic Info
-    name: "",
-    dob: "",
+    fullName: "",
+    dateOfBirth: "",
     passportNo: "",
 
     // Academic Qualification
     qualification: "",
     collegeName: "",
-    percentageGradeCgpa: "",
+    result: "",
     passedYear: "",
 
     // Additional Info
@@ -65,26 +66,42 @@ const InquiryForm = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    let formData = await submitInquiry(formData);
+    // let formData;
+    try{
+      console.log("Submitting Inquiry with Data:", formData);
+      let res = await submitInquiry(formData);
+
+    }catch(error){
+      // console.error("Error submitting inquiry:", error);
+      toast.error(error.msg || "Failed to submit inquiry. Please try again.");
+      return;
+    }
 
     console.log("Form Data Submitted:", formData);
+      toast.success("Inquiry submitted successfully!");
     setSubmitted(true);
     // Reset form after 2 seconds
     setTimeout(() => {
       setFormData({
-        name: "",
-        dob: "",
-        passportNo: "",
-        qualification: "",
-        collegeName: "",
-        percentageGradeCgpa: "",
-        passedYear: "",
-        maritalStatus: "",
-        address: "",
-        mobileNo: "",
-        email: "",
-        country: "",
-        courses: "",
+       fullName: "",
+    dateOfBirth: "",
+    passportNo: "",
+
+    // Academic Qualification
+    qualification: "",
+    collegeName: "",
+    result: "",
+    passedYear: "",
+
+    // Additional Info
+    maritalStatus: "",
+    address: "",
+    mobileNo: "",
+    email: "",
+
+    // Country & Courses
+    country: "",
+    courses: "",
       });
       setSubmitted(false);
     }, 2000);
@@ -103,9 +120,10 @@ const InquiryForm = () => {
             <input
               type="text"
               id="name"
-              name="name"
-              value={formData.name}
+              name="fullName"
+              value={formData.fullName}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="Enter your full name"
               required
             />
@@ -116,9 +134,10 @@ const InquiryForm = () => {
             <input
               type="date"
               id="dob"
-              name="dob"
-              value={formData.dob}
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
               onChange={handleChange}
+              onInput={handleChange}
               required
             />
           </div>
@@ -131,6 +150,7 @@ const InquiryForm = () => {
               name="passportNo"
               value={formData.passportNo}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="Enter passport number"
             />
           </div>
@@ -165,19 +185,21 @@ const InquiryForm = () => {
               name="collegeName"
               value={formData.collegeName}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="Enter college/university name"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="percentageGradeCgpa">Percentage/Grade/CGPA</label>
+            <label htmlFor="percentageGradeCgpa">Result</label>
             <input
               type="text"
-              id="percentageGradeCgpa"
-              name="percentageGradeCgpa"
-              value={formData.percentageGradeCgpa}
+              id="result"
+              name="result"
+              value={formData.result}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="e.g., 85% or A+ or 3.8"
             />
           </div>
@@ -190,6 +212,7 @@ const InquiryForm = () => {
               name="passedYear"
               value={formData.passedYear}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="e.g., 2023"
               min="1980"
               max={new Date().getFullYear()}
@@ -239,6 +262,7 @@ const InquiryForm = () => {
               name="mobileNo"
               value={formData.mobileNo}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="Enter mobile number"
               pattern="[0-9\-\+\s]+"
               required
@@ -253,6 +277,7 @@ const InquiryForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              onInput={handleChange}
               placeholder="Enter email address"
               required
             />

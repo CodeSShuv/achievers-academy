@@ -6,13 +6,13 @@ import Testimonials from "./Component/Testimonials.jsx";
 import Contact from "../../component/Contact.jsx";
 import Footer from "../../component/Footer.jsx";
 import "./home.css";
-const Home = () => {
+const Home = ({ toggleBookingForm }) => {
   return (
     <>
     <div id="home-container">
       <HeroPage></HeroPage>
       <Introduction></Introduction>
-      <PopularDestination></PopularDestination>
+      <PopularDestination toggleBookingForm={toggleBookingForm}/>
       <OurServices/>
       <Testimonials/>
       <Contact/>

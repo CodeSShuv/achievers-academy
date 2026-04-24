@@ -22,7 +22,7 @@ const TestPrep = () => {
                             <p>
                                 {test.description}
                             </p>
-                            <a href={test.link}>
+                            <a href={test.link} target="_blank">
                                 Read More
                             </a>
                         </div>

@@ -14,17 +14,26 @@ export const topUniversities = {
   ],
 
   "canada": [
-    { university_name: "University of Toronto", website: "https://www.utoronto.ca", img: "https://upload.wikimedia.org/wikipedia/commons/0/04/Utoronto_coa.svg" },
-    { university_name: "McGill University", website: "https://www.mcgill.ca", img: "https://upload.wikimedia.org/wikipedia/en/5/51/McGill_University_CoA.svg" },
-    { university_name: "University of British Columbia", website: "https://www.ubc.ca", img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/UBC_coat_of_arms.svg" },
-    { university_name: "University of Alberta", website: "https://www.ualberta.ca", img: "https://upload.wikimedia.org/wikipedia/commons/9/9b/University_of_Alberta_Coat_of_Arms.svg" },
-    { university_name: "McMaster University", website: "https://www.mcmaster.ca", img: "https://upload.wikimedia.org/wikipedia/en/6/6c/McMaster_University_coat_of_arms.svg" },
-    { university_name: "University of Waterloo", website: "https://uwaterloo.ca", img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/University_of_Waterloo_coat_of_arms.svg" },
-    { university_name: "Western University", website: "https://www.uwo.ca", img: "https://upload.wikimedia.org/wikipedia/en/1/1b/Western_University_coat_of_arms.svg" },
-    { university_name: "University of Montreal", website: "https://www.umontreal.ca", img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Université_de_Montréal_coat_of_arms.svg" },
-    { university_name: "Queen's University", website: "https://www.queensu.ca", img: "https://upload.wikimedia.org/wikipedia/en/5/56/Queen%27s_University_coat_of_arms.svg" },
-    { university_name: "University of Calgary", website: "https://www.ucalgary.ca", img: "https://upload.wikimedia.org/wikipedia/commons/0/0a/University_of_Calgary_coat_of_arms.svg" }
-  ],
+  { university_name: "University of Toronto", website: "https://www.utoronto.ca", img: "https://upload.wikimedia.org/wikipedia/commons/0/04/Utoronto_coa.svg" },
+
+  { university_name: "McGill University", website: "https://www.mcgill.ca", img: "https://upload.wikimedia.org/wikipedia/en/5/51/McGill_University_CoA.svg" },
+
+  { university_name: "University of British Columbia", website: "https://www.ubc.ca", img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/UBC_coat_of_arms.svg" },
+
+  { university_name: "University of Alberta", website: "https://www.ualberta.ca", img: "https://upload.wikimedia.org/wikipedia/commons/9/9b/University_of_Alberta_Coat_of_Arms.svg" },
+
+  { university_name: "McMaster University", website: "https://www.mcmaster.ca", img: "https://upload.wikimedia.org/wikipedia/en/6/6c/McMaster_University_coat_of_arms.svg" },
+
+  { university_name: "University of Waterloo", website: "https://uwaterloo.ca", img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/University_of_Waterloo_coat_of_arms.svg" },
+
+  { university_name: "Western University", website: "https://www.uwo.ca", img: "https://upload.wikimedia.org/wikipedia/en/1/1b/Western_University_coat_of_arms.svg" },
+
+  { university_name: "University of Montreal", website: "https://www.umontreal.ca", img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Université_de_Montréal_coat_of_arms.svg" },
+
+  { university_name: "Queen's University", website: "https://www.queensu.ca", img: "https://upload.wikimedia.org/wikipedia/en/5/56/Queen%27s_University_coat_of_arms.svg" },
+
+  { university_name: "University of Calgary", website: "https://www.ucalgary.ca", img: "https://upload.wikimedia.org/wikipedia/commons/0/0a/University_of_Calgary_coat_of_arms.svg" }
+],
 
   "uk": [
     { university_name: "University of Oxford", website: "https://www.ox.ac.uk", img: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Oxford-University-Circlet.svg" },
@@ -40,17 +49,26 @@ export const topUniversities = {
   ],
 
   "australia": [
-    { university_name: "University of Melbourne", website: "https://www.unimelb.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Melbourne_logo.svg" },
-    { university_name: "University of Sydney", website: "https://www.sydney.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/0/0f/University_of_Sydney_coat_of_arms.svg" },
-    { university_name: "UNSW Sydney", website: "https://www.unsw.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/1/1f/UNSW_Sydney_logo.svg" },
-    { university_name: "Australian National University", website: "https://www.anu.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/4/4c/Australian_National_University_coat_of_arms.svg" },
-    { university_name: "Monash University", website: "https://www.monash.edu", img: "https://upload.wikimedia.org/wikipedia/en/7/7f/Monash_University_logo.svg" },
-    { university_name: "University of Queensland", website: "https://www.uq.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/0/0c/University_of_Queensland_coat_of_arms.svg" },
-    { university_name: "University of Western Australia", website: "https://www.uwa.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/5/5a/University_of_Western_Australia_logo.svg" },
-    { university_name: "University of Adelaide", website: "https://www.adelaide.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/6/6a/University_of_Adelaide_coat_of_arms.svg" },
-    { university_name: "UTS Sydney", website: "https://www.uts.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/3/3c/University_of_Technology_Sydney_logo.svg" },
-    { university_name: "RMIT University", website: "https://www.rmit.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/5/5b/RMIT_University_logo.svg" }
-  ],
+  { university_name: "University of Melbourne", website: "https://www.unimelb.edu.au", img: "https://upload.wikimedia.org/wikipedia/commons/9/9a/University_of_Melbourne_logo.svg" },
+
+  { university_name: "University of Sydney", website: "https://www.sydney.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/0/0f/University_of_Sydney_coat_of_arms.svg" },
+
+  { university_name: "UNSW Sydney", website: "https://www.unsw.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/1/1f/UNSW_Sydney_logo.svg" },
+
+  { university_name: "Australian National University", website: "https://www.anu.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/4/4c/Australian_National_University_coat_of_arms.svg" },
+
+  { university_name: "Monash University", website: "https://www.monash.edu", img: "https://upload.wikimedia.org/wikipedia/en/7/7f/Monash_University_logo.svg" },
+
+  { university_name: "University of Queensland", website: "https://www.uq.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/0/0c/University_of_Queensland_coat_of_arms.svg" },
+
+  { university_name: "University of Western Australia", website: "https://www.uwa.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/5/5a/University_of_Western_Australia_logo.svg" },
+
+  { university_name: "University of Adelaide", website: "https://www.adelaide.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/6/6a/University_of_Adelaide_coat_of_arms.svg" },
+
+  { university_name: "UTS Sydney", website: "https://www.uts.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/3/3c/University_of_Technology_Sydney_logo.svg" },
+
+  { university_name: "RMIT University", website: "https://www.rmit.edu.au", img: "https://upload.wikimedia.org/wikipedia/en/5/5b/RMIT_University_logo.svg" }
+],
 
   "new-zealand": [
     { university_name: "University of Auckland", website: "https://www.auckland.ac.nz", img: "https://upload.wikimedia.org/wikipedia/en/5/5d/University_of_Auckland_coat_of_arms.svg" },

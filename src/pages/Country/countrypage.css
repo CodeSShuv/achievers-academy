@@ -16,6 +16,7 @@ GLOBAL PAGE
   position: relative;
 
   overflow-x: hidden;
+  padding: 2rem;
 }
 
 
@@ -427,4 +428,129 @@ RESPONSIVE
   gap: 1rem;
 }
 
+}
+
+@media (max-width: 768px) {
+  .country-page {
+    padding: 1rem;
+  }
+
+  .country-page__wrapper {
+    padding: 2rem 5%;
+  }
+
+  .country-page__intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .country-page__stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat {
+    padding: 1rem;
+  }
+
+  .stat h3 {
+    font-size: 0.9rem;
+  }
+
+  .stat p {
+    font-size: 1.4rem;
+  }
+
+  .country-page__cta {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .country-page__wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .country-page__section {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .country-page__card {
+    padding: 1.2rem;
+  }
+
+  .country-page__imageCard img {
+    height: 250px;
+  }
+
+  .country-page__imageCard p {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .country-page__cost {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cost-card {
+    padding: 1.2rem;
+  }
+
+  .country-page__facts {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .country-page__fact {
+    padding: 1rem;
+  }
+
+  .country-page__bottomCta {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .country-page__wrapper {
+    padding: 1.5rem 2%;
+  }
+
+  .country-page__intro {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .country-page__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat p {
+    font-size: 1.2rem;
+  }
+
+  .country-page__wrapper h2 {
+    font-size: 1.8rem;
+  }
+
+  .country-page__imageCard img {
+    height: 200px;
+  }
+
+  .country-page__cost {
+    grid-template-columns: 1fr;
+  }
+
+  .country-page__facts {
+    grid-template-columns: 1fr;
+  }
+
+  .country-page__bottomCta {
+    padding: 1.5rem;
+  }
 }

@@ -29,7 +29,7 @@
     justify-content: center;
     align-items: center;
     /* width: min(100%, 25rem); */
-    width: 25rem;
+    width: clamp(20rem, 25vw, 25rem);
     height: 25rem;
     padding: 1.5625rem;
     /* border-radius: 1rem; */
@@ -64,10 +64,9 @@
 }
 
 .welcome-text {
-    /* color: ; */
-    /* -webkit-text-stroke: 0.0625rem red; */
+    /* font-size: 2.5rem; */
 
-    background-color:var(--danger-color);
+    background-color:var(--danger-color) !important;
     color: white;
     font-size: 10rem;
 }
@@ -91,13 +90,14 @@
     /* background-color: rgba(0, 0, 0, 0.565); */
 }
 .summary-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 
     background: var(--danger-color);
     padding: 4rem 2rem;
-
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -149,13 +149,14 @@
 
 @media (max-width: 768px) {
     .summary-stats {
-        grid-template-columns: 1fr;
+        
         gap: 1.5rem;
-        padding: 3rem 1.5rem;
+        padding: 2rem 1.5rem;
+        width: 100%;
     }
 
     .stat-number {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
 
     .stat-label {
@@ -169,32 +170,58 @@
 
 }
 
-@media (max-width: 768px) {
-    .introduction-container h1 {
-        font-size: 3rem;
+@media (max-width: 480px) {
+    .introduction {
+        padding: 3rem 0;
+        height: auto;
+        gap: 1rem;
     }
 
-    .introduction-container p {
-        width: 90%;
-        font-size: 1.4rem !important;
+    .introduction-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
     }
 
     .welcome-text {
-        font-size: 3rem !important;
+        font-size: 2rem !important;
     }
 
     .intro-card {
         width: 100%;
-        max-width: 22rem;
-        padding: 1.25rem;
+        max-width: 20rem;
+        height: auto;
+        padding: 1rem;
+        margin-top: 1rem;
     }
 
     .intro-cards-container {
         gap: 1rem;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .intro-card img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .intro-card h3 {
+        font-size: 1.4rem;
     }
 
     .intro-card p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .summary-stats {
+        padding: 1rem 1rem;
+        gap: 1.3rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
     }
 }
