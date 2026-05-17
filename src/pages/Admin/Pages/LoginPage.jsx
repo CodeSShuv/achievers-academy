@@ -1,7 +1,13 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
 import "./css/loginpage.css";
 const LoginPage = () => {
     const baseUrl = import.meta.env.BASE_URL;
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
+
+    
   return (
     <div className='login-page'>
         <div className="wall-img">
@@ -15,7 +21,8 @@ const LoginPage = () => {
         </div>
             <div className="input-field">
 
-            <input type="email" placeholder='Enter your Email' name="email" className='login-input' />
+            <input type="email" placeholder='Enter your Email' name="email" className='login-input'
+            value />
             </div>
 
             <div className='input-field'>

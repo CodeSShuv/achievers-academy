@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import Dashboard from '../Component/Dashboard'
 import ProfileList from '../Component/ProfileList'
 import ProfileDetails from '../Component/ProfileDetails'
+// import BookingsList from '../Component/BookingList'
 import './css/adminpanel.css'
+import BookingsList from './../Component/BookingList';
 
 const AdminPanel = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -12,6 +14,7 @@ const AdminPanel = () => {
   const navItems = [
     { id: 'dashboard', icon: '📊', label: 'Dashboard' },
     { id: 'profiles', icon: '👥', label: 'Profiles' },
+    {id:'bookings', label:"Bookings"}
     // { id: 'addProfile', icon: '➕', label: 'Add Profile' },
   ]
 
@@ -36,6 +39,8 @@ const AdminPanel = () => {
       case 'profileDetails':
         return <ProfileDetails profileId={selectedProfileId} onBack={() => setCurrentView('profiles')} />
      
+      case 'bookings':
+        return <BookingsList/>
       default:
         return <Dashboard />
     }

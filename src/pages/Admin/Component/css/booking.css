@@ -1,0 +1,145 @@
+/* Profile List Styles */
+.booking-list {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.booking-header h2 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Table Styles */
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.booking-table thead {
+  background: #f8f9fa;
+}
+
+.booking-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.booking-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e9ecef;
+  color: #555;
+}
+
+.booking-table tbody tr:hover {
+  background: #f8f9fa;
+}
+#delete-btn{
+
+    padding: .5rem;
+    background-color: var(--danger-color);
+    color: White;
+    border:1px solid var(--danger-color);
+}
+#delete-btn:hover{
+    background-color: transparent;
+    /* border: 1px solid red; */
+    color: var(--danger-color);
+}
+
+/* Filter Options */
+.filter-options {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    border-radius: 0.5rem;
+}
+
+.filter-options ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-options li {
+    padding: 0.6rem 1.2rem;
+    background: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.filter-options li:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 0.5rem rgba(126, 20, 255, 0.15);
+}
+
+.filter-options li:active {
+background: var(--primary-color);
+    color: white;
+}
+
+/* Status Badge */
+/* .status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+
+.action-btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.action-btn.view {
+  background: #3498db;
+  color: white;
+}
+
+.action-btn.view:hover {
+  background: #2980b9;
+} */

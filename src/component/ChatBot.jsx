@@ -29,9 +29,9 @@ const ChatBot = () => {
   return (
     <div className="cb-container">
       {/* Toggle */}
-      <button className="cb-toggle" onClick={() => setOpen(!open)}>
-        <img src={`${baseUrl}/img/whatsapp.png`} alt="Chat Bot" />
-      </button>
+      <a className="cb-toggle" target="_blank" href="https://wa.me/9779709060751?text=Hello%20there!">
+        <img src={`${baseUrl}/img/whatsapp.png`} alt="Message me." />
+      </a>
 
       {/* Chatbox */}
       

@@ -1,11 +1,20 @@
 .contact-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 3.75rem 5rem;
-  background: #f5f5f5;
+  /* background: #212121; */
   min-height: 80vh;
   overflow-x: hidden;
+}
+.contact-card { 
+  
+  width: 80rem;
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
 }
 
 /* LEFT IMAGE */
@@ -13,6 +22,12 @@
 
 /* RIGHT SIDE */
 .contact-right {
+  /* background-color:#212121 ; */
+  background-color: var(--primary-color );
+   padding: 6rem 3rem;
+   outline:1px solid var(--primary-color);
+  /* outline:1px solid rgb(58, 58, 58); */
+   border-radius: 1rem ;
   width: 40%;
 }
 
@@ -20,26 +35,50 @@
   font-size: 2.25rem;
   font-weight: 600;
   margin-bottom: 1.875rem;
+  color:white
 }
 
+.contact-right p{
+  font-size: 2rem;
+  color :white
+}
+
+
+.contact-right a{
+  padding: 2rem;
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 3rem;
+  width: 10rem;
+  margin-top: 2rem;
+  transform: translateY(3rem);
+}
+.contact-right #smallp{
+  font-size: 1rem;
+}
 /* FORM */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-
+.link-container{
+  margin-top: 3rem;
+}
 /* INPUTS */
 .contact-form input,
 .contact-form textarea {
   padding: 0.9375rem 1.25rem;
-  border-radius: 1.875rem;
+  border-radius: .5rem;
   border: none;
-  outline: none;
-  background: #eaeaea;
+  outline: 1px solid rgb(43, 43, 43);
+  background: #212121;
   font-size: 0.875rem;
-  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.05),
-              inset -3px -3px 6px rgba(255,255,255,0.8);
+  /* box-shadow: inset 3px 3px 6px rgba(0,0,0,0.05),
+              inset -3px -3px 6px rgba(255,255,255,0.8); */
+              color: gainsboro;
 }
 
 /* TEXTAREA */
@@ -50,24 +89,29 @@
 }
 
 /* BUTTON */
-.contact-form button {
+.contact-form a {
   width: fit-content;
   padding: 0.75rem 1.875rem;
-  border-radius: 1.5625rem;
+  border-radius: .5rem;
   border: none;
-  background: linear-gradient(to right, #fbb034, #ff8c42);
+  background-color: #212121;
+  /* background: linear-gradient(to right, #fbb034, #ff8c42); */
   color: white;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
+  /* transition: 0.3s; */
+  outline:#212121 ;
+  transition: all .5s ease-in-out;
+  /* margin-top: ; */
 }
 
 .contact-form button:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  outline: 1px solid white;
+  background-color: transparent;
+  /* opacity: 0.9; */
 }
 .map-container {
-  width: 50%;
+  width: 30%;
   height: 30rem;
   border-radius: 20px;
   overflow: hidden;
@@ -90,10 +134,15 @@
     gap: 2rem;
   }
 
-
-  .contact-right {
-    width: 100%;
-  }
+.contact-card{
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact-right{
+  width: 37%;
+}
+ 
 }
 
 @media (max-width: 768px) {

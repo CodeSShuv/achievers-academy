@@ -7,12 +7,12 @@ const BookingForm = ({toggleBookingForm}) => {
  const [email,setEmail] = useState("");
  const [address,setAddress] = useState("");
  const [phoneNumber,setPhoneNumber] = useState("");
-  
+  const [booking,setBooking] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
       const { name, value } = e.target;
-      console.log("Input changed:", name, value);
+      // console.log("Input changed:", name, value);
       switch (name) {
         case "fullName":
           setFullName(value);
@@ -26,6 +26,8 @@ const BookingForm = ({toggleBookingForm}) => {
         case "phoneNumber":
           setPhoneNumber(value);
           break;
+        case "booking":
+          setBooking(value);
         default:
           break;
       }
@@ -34,13 +36,13 @@ const BookingForm = ({toggleBookingForm}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Submitting booking:", { fullName, email, address, phoneNumber });
-      await submitBooking({ fullName, email, address, phoneNumber });
+      // console.log("Submitting booking:", { fullName, email, address, phoneNumber,booking });
+      await submitBooking({ fullName, email, address, phoneNumber,booking });
       
     }
       catch (error) {
         toast.error(error.msg || "Failed to submit booking. Please try again.");
-        console.error("Error submitting booking:", error);
+        // console.error("Error submitting booking:", error);
         return;
       }
     setSubmitted(true);
@@ -51,6 +53,7 @@ const BookingForm = ({toggleBookingForm}) => {
       setEmail("");
       setAddress("");
       setPhoneNumber(""); 
+      se
       setSubmitted(false);
     }, 2000);
   };
@@ -72,7 +75,7 @@ const BookingForm = ({toggleBookingForm}) => {
       <div className="booking-form-header">
         <button onClick={toggleBookingForm}>&times;</button>
       </div>
-        <h2>Book a Free Consultation</h2>
+        <h2>Book </h2>
         <p>Get expert guidance for your study abroad journey.</p>
         <form>
           <div className="input-box">
@@ -87,6 +90,14 @@ const BookingForm = ({toggleBookingForm}) => {
             </div>
             <div className="input-box">
             <input name="phoneNumber" value={phoneNumber} onChange={handleChange} type="tel" placeholder="Your Phone Number" required />
+            </div>
+            <div className="input-box">
+              <select name="booking" onChange={handleChange} value={booking}>
+                <option key={"abc"} value="Select to book"></option>
+                <option key={"abcd"}value="PTE"> PTE</option>
+                <option key={"abcde"}value="Consultant">Consultant</option>
+                <option key={"abcdef"}value="IELTS">IELTS</option>
+              </select>
             </div>
             <button type="submit" onClick={handleSubmit}>
               Book Now

@@ -7,7 +7,7 @@ const InquiryForm = () => {
     // Basic Info
     fullName: "",
     dateOfBirth: "",
-    passportNo: "",
+    passportNumber: "",
 
     // Academic Qualification
     qualification: "",
@@ -85,7 +85,7 @@ const InquiryForm = () => {
       setFormData({
        fullName: "",
     dateOfBirth: "",
-    passportNo: "",
+    passportNumber: "",
 
     // Academic Qualification
     qualification: "",
@@ -147,7 +147,7 @@ const InquiryForm = () => {
             <input
               type="text"
               id="passportNo"
-              name="passportNo"
+              name="passportNumber"
               value={formData.passportNo}
               onChange={handleChange}
               onInput={handleChange}

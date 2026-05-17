@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react'
 import './css/dashboard.css'
 
 const StatCard = ({ icon, label, value, color }) => (
-  <div className="stat-card" style={{ borderLeftColor: color }}>
+  <div className="stats-card" style={{ borderLeftColor: color }}>
     <div className="stat-icon">{icon}</div>
     <div className="stat-info">
       <span className="stat-value">{value}</span>
-      <span className="stat-label">{label}</span>
+      <span className="stats-label">{label}</span>
     </div>
   </div>
 )
@@ -20,10 +20,10 @@ const Dashboard = () => {
   ]
 
   const recentActivities = [
-    { id: 1, action: 'New student registered', time: '2 mins ago' },
-    { id: 2, action: 'Inquiry received from John Doe', time: '15 mins ago' },
-    { id: 3, action: 'Profile updated for Sarah Smith', time: '1 hour ago' },
-    { id: 4, action: 'New course added: IELTS Prep', time: '3 hours ago' },
+    // { id: 1, action: 'New student registered', time: '2 mins ago' },
+    // { id: 2, action: 'Inquiry received from John Doe', time: '15 mins ago' },
+    // { id: 3, action: 'Profile updated for Sarah Smith', time: '1 hour ago' },
+    // { id: 4, action: 'New course added: IELTS Prep', time: '3 hours ago' },
   ]
 
   return (

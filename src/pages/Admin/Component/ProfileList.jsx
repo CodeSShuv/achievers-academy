@@ -42,7 +42,7 @@ const ProfileList = ({ onViewProfile }) => {
               <td>{profile._id}</td>
               <td>{profile.fullName}</td>
               <td>{profile.email}</td>
-              <td>{profile.mobileNumber}</td>
+              <td>{profile.mobileNo}</td>
               
               <td>
                 {/* <span className={`status-badge ${profile.status.toLowerCase()}`}>

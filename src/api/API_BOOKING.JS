@@ -21,3 +21,14 @@ export const getBookings = async () => {
     throw error;
   }
 }
+
+export const deleteBookings = async (bookingId)=>{
+  try{
+    const res = await axios.delete(`${API_BASE_URL}/bookings/delete/${bookingId}`);
+    return res.data;
+
+  }
+  catch(error){
+      throw error ;
+  }
+}

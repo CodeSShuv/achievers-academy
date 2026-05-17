@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./css/contact.css";
 
 export default function Contact() {
@@ -5,30 +6,31 @@ export default function Contact() {
     <div className="contact-section">
       
       {/* LEFT IMAGE */}
+      <div className="contact-card">
+
 <div className="map-container contact-left">
   <iframe
     src="https://www.google.com/maps?q=Kathmandu&output=embed"
     
-   
+    
     allowFullScreen=""
     loading="lazy"
-  ></iframe>
+    ></iframe>
 </div>
 
       {/* RIGHT FORM */}
       <div className="contact-right">
-        <h2>Talk to Us</h2>
+        <h2>Dont Miss out the opportunity,<br/> </h2>
+        <p> Fill out the inquiry form </p>
+        <p id="smallp">We will be contacting you shortly. </p>
 
-        <form className="contact-form">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="E-mail" />
-          <input type="tel" placeholder="Phone Number" />
-          <textarea placeholder="Message"></textarea>
+        <div className="link-container">
 
-          <button type="submit">Send message</button>
-        </form>
+        <Link to={'/inquiry'}>Inquiry</Link>
+        </div>
       </div>
 
+    </div>
     </div>
   );
 }

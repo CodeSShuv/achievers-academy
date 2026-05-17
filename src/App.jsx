@@ -40,10 +40,12 @@ const App = () => {
         <Route path="/" element={<Home toggleBookingForm={toggleBookingForm} />} />
         <Route path="/inquiry" element={<InquiryPage />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/test-preparation" element={<TestPrep />} />
+        <Route path="/test-preparation" element={<TestPrep
+        toggleBookingForm={toggleBookingForm} />} />
         <Route path="/study/:slug" element={<CountryPage toggleBookingForm={toggleBookingForm} />} />
-        <Route path ="/admin" element={<Admin />} />
-        <Route path="/admin/login-page" element={<LoginPage />} />
+       {user && <Route path ="/admin" element={<Admin />} />}
+        
+        <Route path="/login-page" element={<LoginPage />} />
       </Routes>
       
       

@@ -1,3 +1,8 @@
+:root{
+     --au-font-display: 'Cormorant Garamond', Georgia, serif;
+  --au-font-body:    'DM Sans', sans-serif;
+}
+
 .navbar{
     background-color: white;
     width: 100%;
@@ -25,6 +30,7 @@
     gap: 2rem;
     align-items: center;
     overflow: visible;
+     font-family:  var(--au-font-body);
 }
 
 /* Logo */
@@ -40,6 +46,7 @@
     color: gray;
     font-size: 1rem;
     font-weight: 500;
+    font-family:  var(--au-font-body);
 }
 
 .nav-links a:hover{

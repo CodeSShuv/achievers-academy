@@ -1,277 +1,481 @@
-﻿/* Google Font (Optional but Recommended) */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+﻿/* ════════════════════════════════════════════
+   ACHIEVERS CAREER ACADEMY — About Us Styles
+   All spacing & font sizes use rem units
+   ════════════════════════════════════════════ */
 
-/* Root Colors */
-:root {
-  --primary: #1d4ed8;
-  --secondary: #f97316;
-  --neutral-100: #f8fafc;
-  --neutral-200: #e2e8f0;
-  --neutral-800: #1f2937;
-  --neutral-600: #475569;
-  --text-dark: #0f172a;
-  --text-light: #475569;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+
+  /* ── Project theme tokens ───────────────── */
+  :root {
+  --primary:      #dc2626;
+  --secondary:    #ef4444;
+  --neutral-100:  #fff5f5;
+  --neutral-200:  #fee2e2;
+  --neutral-800:  #7f1d1d;
+  --neutral-600:  #991b1b;
+  --text-dark:    #1a0000;
+  --text-light:   #6b2020;
+
+  --au-navy:        #7f1d1d;
+  --au-navy-mid:    #991b1b;
+  --au-gold:        #ff9090;
+  --au-gold-light:  #fca5a5;
+  --au-cream:       #fff5f5;
+  --au-cream-dark:  #fee2e2;
+  --au-text:        #1a0000;
+  --au-muted:       #6b2020;
+  --au-white:       #ffffff;
+  --au-border:      rgba(220, 38, 38, 0.15);
+
+  --au-radius-sm:   0.5rem;
+  --au-radius-md:   0.875rem;
+  --au-radius-lg:   1.5rem;
+
+  --au-shadow-card: 0 0.125rem 2rem rgba(127, 29, 29, 0.08);
+  --au-shadow-img:  0 1rem 3rem rgba(127, 29, 29, 0.18);
+
+  --au-font-display: 'Cormorant Garamond', Georgia, serif;
+  --au-font-body:    'DM Sans', sans-serif;
+}
+/* ── BASE ─────────────────────────────────── */
+.au-page {
+  font-family: var(--au-font-body);
+  background-color: var(--au-cream);
+  color: var(--au-text);
+  overflow-x: hidden;
 }
 
-/* Main Container */
-.about-us {
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  padding: 4rem 2.5rem;
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top left, rgba(29, 78, 216, 0.08), transparent 38%),
-    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  color: var(--text-dark);
-}
-
-/* Header Section */
-.about-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.about-label {
+/* ── EYEBROW LABEL ────────────────────────── */
+.au-eyebrow {
   display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: rgba(29, 78, 216, 0.08);
-  color: var(--primary);
-  letter-spacing: 0.16em;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--au-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--au-gold);
+  margin-bottom: 0.75rem;
 }
 
-.about-header h1 {
-  font-size: 3.15rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -0.04em;
+.au-eyebrow--light {
+  color: var(--au-gold-light);
 }
 
-.about-subtitle {
-  font-size: 1.1rem;
-  color: var(--neutral-600);
-  max-width: 680px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-.about-subtitle span {
-  color: var(--danger-color);
-  font-weight: 700;
-}
-
-/* Hero Grid */
-.about-hero-grid {
+/* ── HERO ─────────────────────────────────── */
+.au-hero {
   display: grid;
-  grid-template-columns: 1.7fr 1fr;
-  gap: 1.75rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 6rem 2rem 5rem;
 }
 
-.about-intro-card {
-  padding: 2rem;
-  border-radius: 1.4rem;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  box-shadow: 0 1.25rem 2.5rem rgba(15, 23, 42, 0.06);
+.au-hero__heading {
+  font-family: var(--au-font-display);
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
-.about-intro-card p {
+.au-hero__heading em {
+  font-style: italic;
+  color: var(--au-gold);
+}
+
+.au-hero__body {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--au-muted);
+  max-width: 34rem;
+  margin-bottom: 2.25rem;
+}
+
+/* Pills */
+.au-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.au-pill {
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid var(--au-border);
+  background: var(--au-white);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--primary);
+  box-shadow: 0 0.125rem 0.5rem rgba(29,78,216,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+.au-pill:hover {
+  background: var(--primary);
+  color: var(--au-white);
+  border-color: var(--primary);
+}
+
+/* Hero image */
+.au-hero__img-wrap {
+  position: relative;
+}
+
+.au-hero__img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: var(--au-radius-lg);
+  box-shadow: var(--au-shadow-img);
+  display: block;
+}
+
+.au-hero__img-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  background: var(--au-navy);
+  color: var(--au-white);
+  padding: 1.25rem 1.75rem;
+  border-radius: var(--au-radius-md);
+  box-shadow: 0 0.5rem 2rem rgba(11,31,58,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.au-hero__img-badge strong {
+  font-family: var(--au-font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--au-gold);
+  line-height: 1;
+}
+
+.au-hero__img-badge span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.05em;
+}
+
+/* ── STATS STRIP ──────────────────────────── */
+.au-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--au-navy);
+  margin: 3rem 0 0;
+}
+
+.au-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 3rem 1.5rem;
+  border-right: 0.0625rem solid rgba(255,255,255,0.07);
+  transition: background 0.25s;
+}
+
+.au-stat:last-child { border-right: none; }
+.au-stat:hover { background: var(--au-navy-mid); }
+
+.au-stat strong {
+  font-family: var(--au-font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--au-gold);
+  line-height: 1;
+}
+
+.au-stat span {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ── MISSION / VISION ─────────────────────── */
+.au-mv-section {
+  max-width: 75rem;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.au-mv-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: var(--au-white);
+  border-radius: var(--au-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--au-shadow-card);
+  border: 0.0625rem solid var(--au-border);
+}
+
+.au-mv-card__img-wrap {
+  height: 100%;
+  min-height: 22rem;
+  overflow: hidden;
+}
+
+.au-mv-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.au-mv-card:hover .au-mv-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+.au-mv-card__body {
+  padding: 3rem 3.5rem 3rem 2rem;
+}
+
+.au-mv-card--vision .au-mv-card__body {
+  padding: 3rem 2rem 3rem 3.5rem;
+}
+
+.au-mv-card__body h2 {
+  font-family: var(--au-font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--primary);
   margin-bottom: 1.25rem;
 }
 
-.about-pill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+.au-mv-card__body p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--au-muted);
 }
 
-.about-pill-list span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  background: #eff6ff;
-  color: var(--primary);
-  font-size: 0.95rem;
+/* ── SERVICES ─────────────────────────────── */
+.au-services-section {
+  background: var(--au-cream-dark);
+  padding: 5.5rem 2rem;
+}
+
+.au-section-header {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 3.5rem;
+}
+
+.au-section-header h2 {
+  font-family: var(--au-font-display);
+  font-size: 2.5rem;
   font-weight: 600;
+  color: var(--primary);
+  line-height: 1.2;
 }
 
-.about-stats {
+.au-services-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
-.about-stat-card {
-  padding: 1.5rem;
-  border-radius: 1.25rem;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.06);
-  color: var(--text-dark);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.au-svc-card {
+  background: var(--au-white);
+  border-radius: var(--au-radius-md);
+  padding: 2.25rem 2rem;
+  border: 0.0625rem solid var(--au-border);
+  box-shadow: var(--au-shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.about-stat-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0.35rem;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+.au-svc-card:hover {
+  transform: translateY(-0.375rem);
+  box-shadow: 0 1rem 2.5rem rgba(29,78,216,0.12);
 }
 
-.about-stat-card strong {
-  display: block;
+.au-svc-card__icon {
   font-size: 2rem;
-  line-height: 1;
-  color: var(--text-dark);
+  margin-bottom: 1.125rem;
+  display: block;
 }
 
-.about-stat-card span {
-  display: block;
-  margin-top: 0.9rem;
-  font-size: 0.95rem;
-  color: var(--neutral-600);
+.au-svc-card h3 {
+  font-family: var(--au-font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.625rem;
+}
+
+.au-svc-card p {
+  font-size: 0.9375rem;
+  color: var(--au-muted);
   line-height: 1.7;
 }
 
-/* Section Blocks */
-.about-section {
-  margin-bottom: 2.5rem;
-  padding: 2rem;
-  border-radius: 1.4rem;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.04);
-}
-
-.about-section:hover {
-  transform: none;
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.about-section p {
-  font-size: 1.03rem;
-  line-height: 1.9;
-  color: var(--neutral-600);
-}
-
-.about-grid {
+/* ── WHY CHOOSE US ────────────────────────── */
+.au-why-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 75rem;
+  margin: 6rem auto;
+  padding: 0 2rem;
 }
 
-.about-card {
-  padding: 2rem;
-  border-radius: 1.4rem;
-  background: #ffffff;
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.05);
-  position: relative;
+.au-why__img-wrap {
+  border-radius: var(--au-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--au-shadow-img);
 }
 
-.about-card::before {
-  content: "";
-  position: absolute;
-  height: 0.35rem;
+.au-why__img-wrap img {
   width: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  height: 28rem;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.about-card h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+.au-why__img-wrap:hover img {
+  transform: scale(1.04);
 }
 
-.about-card p {
-  font-size: 1rem;
-  color: var(--neutral-600);
+.au-why__body h2 {
+  font-family: var(--au-font-display);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.25;
+  margin-bottom: 2rem;
 }
 
-.about-list {
-  margin-top: 1rem;
-  padding-left: 0;
+.au-why-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.about-list li {
-  position: relative;
-  padding-left: 2.2rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: var(--neutral-600);
+.au-why-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  font-size: 0.9375rem;
+  color: var(--au-text);
+  line-height: 1.6;
 }
 
-.about-list li::before {
-  content: "\2713";
-  position: absolute;
-  left: 0;
-  top: 0.25rem;
-  color: var(--secondary);
-  font-size: 1rem;
+.au-check {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  background: var(--au-gold);
+  color: var(--au-white);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
 }
 
-.about-highlight {
-  border-color: rgba(249, 115, 22, 0.35);
-  background: linear-gradient(180deg, #fff8f1 0%, #ffffff 100%);
+/* ── COMMITMENT BANNER ────────────────────── */
+.au-commitment {
+  background: var(--au-navy);
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .about-us {
-    padding: 3.5rem 2rem;
+.au-commitment__inner {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.au-commitment__inner h2 {
+  font-family: var(--au-font-display);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 600;
+  color: var(--au-white);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.au-commitment__inner p {
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.85;
+}
+
+/* ── RESPONSIVE ───────────────────────────── */
+@media (max-width: 64rem) {
+  .au-hero,
+  .au-why-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 1.5rem 3rem;
   }
 
-  .about-hero-grid {
+  .au-hero__img { height: 22rem; }
+  .au-hero__img-badge { left: 1rem; bottom: -1rem; }
+
+  .au-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .au-stat { border-bottom: 0.0625rem solid rgba(255,255,255,0.07); }
+  .au-stat:nth-child(2) { border-right: none; }
+  .au-stat:nth-child(3), .au-stat:nth-child(4) { border-bottom: none; }
+
+  .au-mv-card,
+  .au-mv-card--vision {
     grid-template-columns: 1fr;
   }
 
-  .about-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .au-mv-card--vision {
+    direction: ltr;
+  }
+
+  .au-mv-card__body,
+  .au-mv-card--vision .au-mv-card__body {
+    padding: 2.5rem 2rem;
+  }
+
+  .au-mv-card__img-wrap {
+    min-height: 16rem;
+  }
+
+  .au-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .au-why__img-wrap img {
+    height: 20rem;
   }
 }
 
-@media (max-width: 720px) {
-  .about-header h1 {
-    font-size: 2.4rem;
-  }
-
-  .about-subtitle {
-    font-size: 1rem;
-  }
-
-  .about-section,
-  .about-intro-card,
-  .about-card,
-  .about-stat-card {
-    padding: 1.5rem;
-  }
-
-  .about-stats,
-  .about-promise-grid {
+@media (max-width: 40rem) {
+  .au-services-grid {
     grid-template-columns: 1fr;
   }
 
-  .about-list li {
-    padding-left: 1.8rem;
+  .au-stats {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  .au-stat { padding: 2rem 1rem; }
+  .au-stat strong { font-size: 2.25rem; }
 }

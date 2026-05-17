@@ -2,7 +2,7 @@ import "./testPrep.css";
 import Banner from "../../component/Banner.jsx";
 import { testPrepData } from "../../data/test_prep_card.js";
 
-const TestPrep = () => {
+const TestPrep = ({toggleBookingForm}) => {
 
 
     return (
@@ -29,6 +29,24 @@ const TestPrep = () => {
                     </div>))}
                
             </div>
+            <section className="cta-section">
+      <div className="cta-container">
+
+        <div className="cta-text">
+          <h2>Book a Class</h2>
+          <p>
+            Get expert guidance for your study abroad journey and discover the best opportunities tailored for you.
+          </p>
+        </div>
+
+        <div className="cta-action">
+          <button onClick={toggleBookingForm}>
+            Book Now
+          </button>
+        </div>
+
+      </div>
+    </section>
         </div>
     );
 }

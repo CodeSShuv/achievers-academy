@@ -11,6 +11,7 @@
     background-position: center;
     background-size: cover;
     overflow-x: hidden;
+    box-sizing: border-box;
     /* background-color: var(--danger-color); */
 }
 
@@ -106,14 +107,11 @@
 .stat-card {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 1.5rem;
-
     padding: 2.5rem 1.5rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     transition: 0.3s ease;
 }
 
@@ -150,13 +148,17 @@
 @media (max-width: 768px) {
     .summary-stats {
         
-        gap: 1.5rem;
-        padding: 2rem 1.5rem;
+        gap: 1rem;
+        padding: 1rem 1rem;
         width: 100%;
+        
     }
 
     .stat-number {
         font-size: 2rem;
+    }
+    .stat-card{
+            padding: 1.5rem 0.5rem;
     }
 
     .stat-label {
@@ -165,7 +167,7 @@
 }
 @media (max-width: 1024px) {
     .introduction-container h1 {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
 }

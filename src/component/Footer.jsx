@@ -1,6 +1,10 @@
 
 import "./css/footer.css"; // Make sure to create this CSS file
 import logo from "../assets/img/logonobg.png"; // Replace with your actual logo path
+import facebook from "../assets/logos/facebook.png"
+import instagram from "../assets/logos/social.png"
+import tiktok from "../assets/logos/tiktok.png"
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -23,16 +27,20 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link to="/about">About</Link>
             </li>
+
             <li>
-              <a href="#destinations">Destinations</a>
+              <Link to="">Test Preparation</Link>
             </li>
+            {/* <li>
+              <Link to="#destinations">Destinations</Link>
+            </li> */}
             <li>
-              <a href="#contact">Contact Us</a>
+              <Link to="/inquiry">Inquiry</Link>
             </li>
           </ul>
         </div>
@@ -40,8 +48,10 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-section contact">
           <h3>Contact Us</h3>
-          <p>Email: info@achieversacademy.com</p>
-          <p>Phone: +977 9812345678</p>
+          <p>Email: <Link to="mailto:info@achieverscareer.com.np">
+            info@achievercareer.com.np</Link></p>
+          <p>Phone: +977 9709060751</p>
+          <p>Tel-Phone: 01-4547097</p>
           <p>Address: Kathmandu, Nepal</p>
         </div>
 
@@ -49,15 +59,17 @@ const Footer = () => {
         <div className="footer-section social">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="#">
-              <img src="/icons/facebook.svg" alt="Facebook" />
-            </a>
-            <a href="#">
-              <img src="/icons/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="#">
-              <img src="/icons/linkedin.svg" alt="LinkedIn" />
-            </a>
+            <Link to="https://www.facebook.com/share/1Kg9eAQbeA/" target="_blank">
+              <img src={facebook}alt="Facebook" />
+            </Link>
+            <Link to="https://www.instagram.com/achievers.career.academy?igsh=YTA5bjllY3U5Y2Zh"
+            target="_blank">
+              <img src={instagram} alt="Instagram" />
+            </Link>
+            <Link to="https://www.tiktok.com/@achievers.career.academy?_r=1&_t=ZS-96EmG0RfFcu"
+            target="_blank">
+              <img  src={tiktok} alt="Tiktok" />
+            </Link>
           </div>
         </div>
       </div>
